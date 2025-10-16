@@ -16,12 +16,12 @@ public class FirstSpringBootApplication {
      ApplicationContext context =  SpringApplication.run(FirstSpringBootApplication.class, args);
 
    //  var userRepository = context.getBean(UserRepository.class);
-        var userService = context.getBean(UserService.class);
-        userService.showEntityState();
-        userService.showRelatedEntities();
+   //     var userService = context.getBean(UserService.class);
+   //     userService.showEntityState();
+   //     userService.showRelatedEntities();
 
      //   userService.persistRelated();
-          userService.deleteRelated();
+    //      userService.deleteRelated();
 
    //     var orderService = context.getBean(OrderService.class);
        // var orderservice2 = context.getBean(OrderService.class);
