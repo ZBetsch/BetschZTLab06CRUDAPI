@@ -4,7 +4,7 @@ spring:
   datasource:
       url: jdbc:mysql://localhost:3306/mystore?createDatabaseIfNotExist=true
       username: root
-      password: ng195626
+      password: P@ssword
   jpa:
     show-sql: true
     hibernate:
