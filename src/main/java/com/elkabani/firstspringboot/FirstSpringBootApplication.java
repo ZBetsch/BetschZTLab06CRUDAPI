@@ -32,54 +32,54 @@ public class FirstSpringBootApplication {
         System.out.println("----------------------------------------------------");
         System.out.println(" ");
 
-        //A) Create a Product with a New Category
-        Category electronics = new Category();
-        electronics.setName("Electronics");
-        categoryRepo.save(electronics);
-
-        Product camera = new Product();
-        camera.setName("Camera");
-        camera.setPrice(new BigDecimal("299.99"));
-        camera.setCategory(electronics);
-        productRepo.save(camera);
-
-        System.out.println(" ");
-        System.out.println("---TABLE DATA AFTER ADDING ELECTRONICS AND CAMERA---");
-        categoryRepo.findAll().forEach(System.out::println);
-        productRepo.findAll().forEach(System.out::println);
-        System.out.println("----------------------------------------------------");
-        System.out.println(" ");
-
-        //B) Create a Product for an Existing Category
-        Category existing = categoryRepo.findById(electronics.getId())
-                .orElseThrow(() -> new RuntimeException("Category not found"));
-
-        Product headphones = new Product();
-        headphones.setName("Headphones");
-        headphones.setPrice(new BigDecimal("89.99"));
-        headphones.setCategory(existing);
-        productRepo.save(headphones);
-
-        System.out.println(" ");
-        System.out.println("---TABLE DATA AFTER ADDING HEADPHONES---");
-        productRepo.findAll().forEach(System.out::println);
-        System.out.println("----------------------------------------------------");
-        System.out.println(" ");
-
-        //C) Delete a Product
-        System.out.println(" ");
-        System.out.println("---TABLE DATA BEFORE DELETING HEADPHONES---");
-        productRepo.findAll().forEach(System.out::println);
-        System.out.println("----------------------------------------------------");
-        System.out.println(" ");
-
-        productRepo.deleteById(headphones.getId());
-
-        System.out.println(" ");
-        System.out.println("---TABLE DATA AFTER DELETING HEADPHONES---");
-        productRepo.findAll().forEach(System.out::println);
-        System.out.println("----------------------------------------------------");
-        System.out.println(" ");
+//        //A) Create a Product with a New Category
+//        Category electronics = new Category();
+//        electronics.setName("Electronics");
+//        categoryRepo.save(electronics);
+//
+//        Product camera = new Product();
+//        camera.setName("Camera");
+//        camera.setPrice(new BigDecimal("299.99"));
+//        camera.setCategory(electronics);
+//        productRepo.save(camera);
+//
+//        System.out.println(" ");
+//        System.out.println("---TABLE DATA AFTER ADDING ELECTRONICS AND CAMERA---");
+//        categoryRepo.findAll().forEach(System.out::println);
+//        productRepo.findAll().forEach(System.out::println);
+//        System.out.println("----------------------------------------------------");
+//        System.out.println(" ");
+//
+//        //B) Create a Product for an Existing Category
+//        Category existing = categoryRepo.findById(electronics.getId())
+//                .orElseThrow(() -> new RuntimeException("Category not found"));
+//
+//        Product headphones = new Product();
+//        headphones.setName("Headphones");
+//        headphones.setPrice(new BigDecimal("89.99"));
+//        headphones.setCategory(existing);
+//        productRepo.save(headphones);
+//
+//        System.out.println(" ");
+//        System.out.println("---TABLE DATA AFTER ADDING HEADPHONES---");
+//        productRepo.findAll().forEach(System.out::println);
+//        System.out.println("----------------------------------------------------");
+//        System.out.println(" ");
+//
+//        //C) Delete a Product
+//        System.out.println(" ");
+//        System.out.println("---TABLE DATA BEFORE DELETING HEADPHONES---");
+//        productRepo.findAll().forEach(System.out::println);
+//        System.out.println("----------------------------------------------------");
+//        System.out.println(" ");
+//
+//        productRepo.deleteById(headphones.getId());
+//
+//        System.out.println(" ");
+//        System.out.println("---TABLE DATA AFTER DELETING HEADPHONES---");
+//        productRepo.findAll().forEach(System.out::println);
+//        System.out.println("----------------------------------------------------");
+//        System.out.println(" ");
 
 
 
